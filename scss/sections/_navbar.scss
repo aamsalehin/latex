@@ -1,0 +1,29 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu{
+   @include gradient;
+    li{
+        padding: 0 0.7rem;
+        a{
+            color: $white !important;
+            text-transform: capitalize;
+            font-weight: 600;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: .6rem;
+                height: 2px;
+                width: 0px;
+                background-color: #fff;
+                transition: all .5s ease;
+            }
+            &:hover::before{
+                width: 50%;
+            }
+        }
+       
+    }
+}

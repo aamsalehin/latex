@@ -1,0 +1,63 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+body {
+  font-family: "Poppins", sans-serif;
+}
+.display-2 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  &--intro {
+    font-weight: 700;
+    color: $white;
+  }
+  &--description {
+    font-size: calc(0.725rem + 0.125vw);
+    display: block;
+    color: $white;
+    margin-top: 1.2rem;
+    text-transform: none;
+    line-height: 1.125rem;
+    max-width: 360px;
+  }
+}
+.display-3 {
+  &--title {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: inline-block;
+    background-image: linear-gradient(to right, $primary, $secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+// Heading line
+.heading-line {
+  &::before {
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    background-color: $primary;
+    margin: 0 auto;
+  }
+  &::after {
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    display: block;
+    background-color: $primary;
+    padding-top: 0.5rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}
+// border right
+.border-right {
+  border-right: 0.1rem solid $gray-300;
+  height: 100%;
+  @media (max-width: 991.98px) {
+    border-right: none;
+  }
+}
